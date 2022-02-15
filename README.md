@@ -1,5 +1,6 @@
 # Perron root bounds
-Calculate bounds on the Perron (dominant) eigenvalue of nonnegative matrices
+Calculate bounds on the Perron (dominant) eigenvalue of nonnegative matrices.
+
 Currently supports the bounds provided by:
 - A. Melman: https://doi.org/10.1080/03081087.2012.667096
 - F. Babouklis, M. Adam, N. Assimakis: DOI:10.1109/MACISE49704.2020.00016
