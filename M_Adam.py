@@ -149,7 +149,19 @@ def Adam_bounds(M):
     
     return lb, ub
     
-    
-if __name__ == 'main':
-    print('Below are the lower and upper bounds of the input matrix:\n')
-    print(Adam_bounds(M))
+def main():
+    # Test the bounds
+    from numpy import random
+    from numpy.linalg import eigvals
+    import time
+    # Generate a random matrix, 1_000x1_000 with range 0-1 (uniform distribution)
+    A = random.rand(1_000, 1_000) 
+    start = time.process_time()
+    LB, UB = Adam_bounds(A)
+    print(f"Time taken for bound calculation: {time.process_time() - start}s")
+    # Print the bounds wrt to true root:
+    print(f"{LB:.2f} <= {abs(eigvals(A)[0]):.2f} <= {UB:.2f}")
+
+
+if __name__ == "__main__":
+    main()
