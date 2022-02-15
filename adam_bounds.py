@@ -1,3 +1,5 @@
+import numpy as np
+
 def row_sums(M):
     return M.sum(axis=1)
 
