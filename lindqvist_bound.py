@@ -38,8 +38,10 @@ def main():
     dimension = 10
     A = np.random.rand(dimension,dimension)
     B = np.random.rand(dimension,dimension)
-    return gamma_inf(A,B)
+    print(f"Lower Bound on B's Perron root: {gamma_inf(A,B)}")
+    print(f"Actual Perron root of B: {Perron_info(B)[0]}")
   
 if __name__ == "__main__":
     main()
     
+
