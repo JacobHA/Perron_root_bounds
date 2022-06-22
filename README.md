@@ -19,3 +19,5 @@ To quickly estimate/bound the dominant eigenvalue can be useful in:
 - Find and implement other bounds
 - Catalog each bound's best use-cases
 - Ensure Bapat and Lindqvist works for zero values (only tested with positive matrices)
+- New paper by Adam et al: https://doi.org/10.1515/spma-2022-0165
+- - Seems like a continued recursive strategy could be employed with "deeper" row sums?
