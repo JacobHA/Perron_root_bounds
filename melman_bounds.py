@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Feb 15 13:18:34 2022
-
 @author: jacob
 """
-
+# Import required packages
+from numpy import ndarray, any, identity, diag, inf, fill_diagonal, sqrt, zeros_like
+from numpy import random
+from numpy.linalg import eigvals
+import time
 
 def Melman_bounds(A):
     """
@@ -24,9 +27,6 @@ def Melman_bounds(A):
         The upper and lower bounds for A's Perron root.
         
     """
-
-    # Import required packages
-    from numpy import ndarray, any, identity, diag, inf, fill_diagonal, sqrt, zeros_like
 
     # Check that M is a 2D numpy array
     if not isinstance(A, ndarray):
@@ -69,9 +69,6 @@ def Melman_bounds(A):
 
 def main():
     # Test the bounds
-    from numpy import random
-    from numpy.linalg import eigvals
-    import time
     # Generate a random matrix, 1_000x1_000 with range 0-1 (uniform distribution)
     A = random.rand(1_000, 1_000) 
     start = time.process_time()
@@ -83,3 +80,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
