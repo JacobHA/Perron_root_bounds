@@ -1,16 +1,8 @@
 import numpy as np
 from numpy import random
 from numpy.linalg import eigvals
+from linalg_functions import row_sums, col_sums
 import time
-
-def row_sums(M):
-    """ Return the row sums of a matrix."""
-    return M.sum(axis=1)
-
-
-def col_sums(M):
-    """ Return the column sums of a matrix."""
-    return M.sum(axis=0)
 
 
 def two_row_sums(M):
